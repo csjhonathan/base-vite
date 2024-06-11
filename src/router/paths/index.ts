@@ -1,5 +1,5 @@
-import { DefaultRoutes } from "./default-route"
+import { DefaultPaths } from "./default-paths"
 
 export const Paths = [
-  ...DefaultRoutes
+  ...DefaultPaths
 ]
