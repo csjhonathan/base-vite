@@ -8,8 +8,7 @@ export const Router = () => {
     <BrowserRouter>
       <Routes>
         {
-          Paths.map(({path, element: Element}) => {
-            return (
+          Paths.map(({path, element: Element}) => (
               <Fragment key={path}>
                 <Route 
                   path={path}
@@ -20,8 +19,7 @@ export const Router = () => {
                   }
                 />
               </Fragment>
-            )
-          })
+          ))
         }
       </Routes>
     </BrowserRouter>

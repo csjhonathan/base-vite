@@ -1,8 +1,9 @@
 import { lazy } from "react";
+import { IPath } from "../../../types/paths";
 
-export const DefaultPaths = [
+export const DefaultPaths: IPath[] = [
   {
-    path: "/home",
+    path: "/",
     element: lazy(() => import("../../../pages/home"))
   }
 ]
