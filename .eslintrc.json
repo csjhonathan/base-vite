@@ -6,8 +6,7 @@
   "extends": [
    "eslint:recommended",
    "plugin:@typescript-eslint/recommended",
-   "plugin:react/recommended",
-    "plugin:import-helpers/order-imports"
+   "plugin:react/recommended"
   ],
   "overrides": [
    {
@@ -32,7 +31,7 @@
    "@stylistic/ts",
    "@typescript-eslint",
    "react",
-   "import-helpers"
+   "eslint-plugin-import-helpers"
   ],
   "ignorePatterns": ["build/", "dist/", "node_modules/"],
   "rules": {
