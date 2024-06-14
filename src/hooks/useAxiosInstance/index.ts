@@ -10,5 +10,5 @@ export const useAxiosInstance = () => {
 		baseURL: VITE_APP_API_URL
 	});
 
-	return { axiosInstance };
+	return axiosInstance;
 };
