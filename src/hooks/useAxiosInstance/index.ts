@@ -1,14 +1,14 @@
-import axios from "axios";
+import axios from 'axios';
 
 const {
-  VITE_APP_API_URL
+	VITE_APP_API_URL
 } = import.meta.env;
 
 export const useAxiosInstance = () => {
 
-  const axiosInstance = axios.create({
-    baseURL: VITE_APP_API_URL
-  });
+	const axiosInstance = axios.create({
+		baseURL: VITE_APP_API_URL
+	});
 
-  return { axiosInstance };
-}
+	return { axiosInstance };
+};

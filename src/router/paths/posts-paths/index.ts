@@ -1,11 +1,12 @@
-import { lazy } from "react";
-import { IPath } from "../../../types/paths";
+import { lazy } from 'react';
+
+import { IPath } from '../../../types/paths';
 
 export const PostsPaths: IPath[] = [
-  {
-    id: "posts",
-    display: "Posts",
-    path: "/posts",
-    element: lazy(() => import("../../../pages/posts"))
-  }
-]
+	{
+		id: 'posts',
+		display: 'Posts',
+		path: '/posts',
+		element: lazy(() => import('../../../pages/posts'))
+	}
+];

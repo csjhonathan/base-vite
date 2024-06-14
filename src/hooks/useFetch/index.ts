@@ -1,24 +1,24 @@
-import { useAxiosInstance } from "../useAxiosInstance";
+import { useAxiosInstance } from '../useAxiosInstance';
 
 interface IUseFetchParams {
-  endpoint: string;
+	endpoint: string;
 }
 
-export const useFetch = <T>(params:IUseFetchParams) => {
-  const { endpoint } = params;
+export const useFetch = <T>(params: IUseFetchParams) => {
+	const { endpoint } = params;
 
-  const { axiosInstance } = useAxiosInstance();
+	const { axiosInstance } = useAxiosInstance();
 
-  const get = async () => {
-    try {
-      const { data } = await axiosInstance.get<T>(endpoint);
-      return data;
-    } catch (error) {
-      throw error;
-    }
-  }
+	const get = async() => {
+		try {
+			const { data } = await axiosInstance.get<T>(endpoint);
+			return data;
+		} catch (error) {
+			throw error;
+		}
+	};
 
-  return {
-    get
-  }
-}
+	return {
+		get
+	};
+};
