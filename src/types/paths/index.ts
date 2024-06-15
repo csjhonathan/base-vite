@@ -4,6 +4,8 @@
  * @since 0.1.0
  */
 
+import { ITemplateProps } from '../templates';
+
 /**
  * @interface IPath
  * @property {string} id - The ID of the path
@@ -17,4 +19,5 @@ export interface IPath {
 	display?: string;
 	path: string;
 	element: React.LazyExoticComponent<()=> JSX.Element>;
+	template: React.LazyExoticComponent<(props: ITemplateProps)=> JSX.Element>;
 }

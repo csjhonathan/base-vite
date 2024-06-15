@@ -7,6 +7,10 @@ export const Paths: IPath[] = [
 	...DefaultPaths,
 	...PostsPaths
 ];
+
+export const getNavigationPaths = (): Omit<IPath, 'element' | 'template'>[] => {
+	return Paths.map(({ id, path, display }) => ({ id, path, display }));
+};
   
 (() => {
 	const paths_ids_hash: { [key: string]: boolean } = {};

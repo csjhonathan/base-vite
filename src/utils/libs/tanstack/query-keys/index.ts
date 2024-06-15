@@ -1,4 +1,6 @@
-export const QUERY_KEYS = {
+import { TQueryKeys } from '../../../../types/libs/tanstack/query-keys';
+
+export const QUERY_KEYS: TQueryKeys = {
 	INDEX_POSTS: 'INDEX_POSTS',
 	SHOW_POST: 'SHOW_POST',
 	INDEX_USERS: 'INDEX_USERS',

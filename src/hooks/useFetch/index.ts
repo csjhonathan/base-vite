@@ -2,7 +2,7 @@ import { IUseFetchParams, IUseFetch, IMakeRequestOptions, IHttpUseFetchOptions }
 
 import { useAxiosInstance } from '../useAxiosInstance';
 
-export const useFetch = <R>(params: IUseFetchParams): IUseFetch<R> => {
+export const useFetch = <R, B = unknown>(params: IUseFetchParams): IUseFetch<R, B> => {
 	const { endpoint } = params;
 
 	const axiosInstance = useAxiosInstance();
