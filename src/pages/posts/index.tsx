@@ -3,7 +3,9 @@ import { Fragment } from 'react/jsx-runtime';
 import { useIndexPosts } from '../../hooks/api/posts/useIndexPosts';
 
 const PostsPage = () => {
-	const { data: data_posts } = useIndexPosts();
+	const { data: data_posts, isLoading: isDataPostsLoading } = useIndexPosts();
+
+	console.log('isDataPostsLoading :>> ', isDataPostsLoading);
 	return (
 		<div>
 			{

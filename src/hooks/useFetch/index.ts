@@ -3,28 +3,29 @@ import { IUseFetchParams, IUseFetch, IMakeRequestOptions, IHttpUseFetchOptions }
 import { useAxiosInstance } from '../useAxiosInstance';
 
 export const useFetch = <R, B = unknown>(params: IUseFetchParams): IUseFetch<R, B> => {
-	const { endpoint } = params;
+	let { endpoint } = params;
 
 	const axiosInstance = useAxiosInstance();
 
 	const makeRequest = async<R>(options: IMakeRequestOptions) => {
 		const { method, body, path_params } = options;
 
-		let url = endpoint;
-
 		if (path_params) {
-			url = `${ endpoint }/${ path_params }`;
+			endpoint = `${ endpoint }/${ path_params }`;
 		}
+
+		//TODO: Remove this line when use real API
+		await new Promise((resolve) => setTimeout(resolve, 5000));
 
 		switch (method) {
 			case 'GET':
-				return axiosInstance.get<R>(url);
+				return axiosInstance.get<R>(endpoint);
 			case 'POST':
-				return axiosInstance.post<R>(url, body);
+				return axiosInstance.post<R>(endpoint, body);
 			case 'PATCH':
-				return axiosInstance.patch<R>(url, body);
+				return axiosInstance.patch<R>(endpoint, body);
 			case 'DELETE':
-				return axiosInstance.delete<R>(url);
+				return axiosInstance.delete<R>(endpoint);
 			default:
 				throw new Error('Invalid method');
 		}
