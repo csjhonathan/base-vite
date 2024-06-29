@@ -16,6 +16,8 @@ const DefaultTemplate = ({ children }: ITemplateProps) => {
 
 	const navigationPaths = getNavigationPaths();
 
+	const isCurrentPath = (path: string) => window.location.pathname === path;
+
 	return (
 		<div className='h-screen'>
 			<div className='container h-full'>
@@ -34,8 +36,8 @@ const DefaultTemplate = ({ children }: ITemplateProps) => {
 													'transition-all duration-300 rounded-none',
 													'hover:text-slate-900 hover:border-slate-500 hover:bg-slate-100',
 													{
-														'text-blue-500 border-b-black': window.location.pathname === navigation.path,
-														'text-gray-700': !(window.location.pathname === navigation.path)
+														'text-blue-500 border-b-black': isCurrentPath(navigation.path),
+														'text-gray-700': !isCurrentPath(navigation.path)
 													}
 												)
 											})
