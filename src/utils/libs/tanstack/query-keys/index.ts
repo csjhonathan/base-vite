@@ -1,16 +1,16 @@
-import { TQueryKeys } from '../../../../types/libs/tanstack/query-keys';
+import { type IQueryKeys } from '../../../../types/libs/tanstack/query-keys';
 
-export const QUERY_KEYS: TQueryKeys = {
-	INDEX_POSTS: 'INDEX_POSTS',
-	SHOW_POST: 'SHOW_POST',
-	INDEX_USERS: 'INDEX_USERS',
-	SHOW_USER: 'SHOW_USER',
-	INDEX_COMMENTS: 'INDEX_COMMENTS',
-	SHOW_COMMENT: 'SHOW_COMMENT',
-	INDEX_PHOTOS: 'INDEX_PHOTOS',
-	SHOW_PHOTO: 'SHOW_PHOTO',
-	INDEX_ALBUMS: 'INDEX_ALBUMS',
-	SHOW_ALBUM: 'SHOW_ALBUM',
-	INDEX_TODOS: 'INDEX_TODOS',
-	SHOW_TODO: 'SHOW_TODO'
+export const POST_QUERY_KEYS: IQueryKeys = {
+	index: [ 'posts' ],
+	show: (id: number) => [ 'post', id ],
+};
+
+export const COMMENT_QUERY_KEYS: IQueryKeys = {
+	index: [ 'comments' ],
+	show: (id: number) => [ 'comment', id ],
+};
+
+export const PHOTO_QUERY_KEYS: IQueryKeys = {
+	index: [ 'photos' ],
+	show: (id: number) => [ 'photo', id ],
 };

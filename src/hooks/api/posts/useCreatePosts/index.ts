@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query';
 
-import { QUERY_KEYS } from '../../../../utils/libs/tanstack/query-keys';
+import { POST_QUERY_KEYS } from '../../../../utils/libs/tanstack/query-keys';
 
 import { ICreatePostFormValues } from '../../../../types/forms/posts';
 import { IPost } from '../../../../types/models';
@@ -15,7 +15,7 @@ export const useCreatePosts = () => {
 		mutationFn: () => post(),
 		onSuccess: () => {
 			queryClient.invalidateQueries({
-				queryKey: [ QUERY_KEYS.POSTS ],
+				queryKey: [ POST_QUERY_KEYS.index ],
 			});
 		}
 	});
