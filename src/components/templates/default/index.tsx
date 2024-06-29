@@ -1,3 +1,5 @@
+import { matchPath } from 'react-router-dom';
+
 import { getNavigationPaths } from '../../../router/paths';
 
 import classNames from 'classnames';
@@ -16,7 +18,10 @@ const DefaultTemplate = ({ children }: ITemplateProps) => {
 
 	const navigationPaths = getNavigationPaths();
 
-	const isCurrentPath = (path: string) => window.location.pathname === path;
+	const isCurrentPath = (path: string) => {
+		const resp = matchPath({ path }, window.location.pathname);
+		return resp !== null;
+	};
 
 	return (
 		<div className='h-screen'>

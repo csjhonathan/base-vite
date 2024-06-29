@@ -20,4 +20,5 @@ export interface IPath {
 	path: string;
 	element: React.LazyExoticComponent<()=> JSX.Element>;
 	template: React.LazyExoticComponent<(props: ITemplateProps)=> JSX.Element>;
+	isMainPath?: boolean;
 }

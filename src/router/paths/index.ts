@@ -9,7 +9,7 @@ export const Paths: IPath[] = [
 ];
 
 export const getNavigationPaths = (): Omit<IPath, 'element' | 'template'>[] => {
-	return Paths.map(({ id, path, display }) => ({ id, path, display }));
+	return Paths.filter(path => path?.isMainPath).map(({ id, path, display }) => ({ id, path, display }));
 };
   
 (() => {

@@ -9,5 +9,6 @@ export const DefaultPaths: IPath[] = [
 		path: '/',
 		element: lazy(() => import('../../../pages/home')),
 		template: lazy(() => import('../../../components/templates/default')),
+		isMainPath: true,
 	}
 ];

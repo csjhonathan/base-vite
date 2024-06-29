@@ -9,5 +9,13 @@ export const PostsPaths: IPath[] = [
 		path: '/posts',
 		element: lazy(() => import('../../../pages/posts')),
 		template: lazy(() => import('../../../components/templates/default')),
+		isMainPath: true,
+	},
+	{
+		id: 'posts-id',
+		display: 'Post',
+		path: '/posts/:id',
+		element: lazy(() => import('../../../pages/posts/[id]')),
+		template: lazy(() => import('../../../components/templates/blank')),
 	}
 ];
