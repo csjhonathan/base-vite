@@ -14,9 +14,6 @@ export const useFetch = <R, B = unknown>(params: IUseFetchParams): IUseFetch<R, 
 			endpoint = `${ endpoint }/${ path_params }`;
 		}
 
-		//TODO: Remove this line when use real API
-		await new Promise((resolve) => setTimeout(resolve, 5000));
-
 		switch (method) {
 			case 'GET':
 				return axiosInstance.get<R>(endpoint);

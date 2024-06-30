@@ -1,6 +1,6 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery } from 'react-query';
 
-import { POST_QUERY_KEYS } from '../../../../utils/libs/tanstack/query-keys';
+import { POSTS_QUERY_KEYS } from '../../../../utils/libs/react-query/query-keys';
 
 import { IPost } from '../../../../types/models';
 
@@ -10,7 +10,7 @@ export const useIndexPosts = () => {
 	const { get } = useFetch<IPost[]>({ endpoint: '/posts' });
 
 	return useQuery({
-		queryKey: [ POST_QUERY_KEYS.index ],
+		queryKey: [ POSTS_QUERY_KEYS.index ],
 		queryFn: () => get()
 	});
 };
