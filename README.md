@@ -25,8 +25,8 @@ Este é um projeto base para iniciar um projeto com React, TypeScript e Vite.
   - É altamente customizável e permite criar designs únicos.
   - Mobile-first e responsivo.
 
-- [TanStack Query (React Query)](https://tanstack.com/query/latest)
-  - TanStack Query é uma biblioteca para gerenciamento de estado e cache de dados em aplicações React.
+- [React Query](https://tanstack.com/query/latest)
+  - React Query é uma biblioteca para gerenciamento de estado e cache de dados em aplicações React.
   - Facilita o gerenciamento de estados nas suas requisições, evita a criação excessiva de estados e simplifica a lógica de carregamento de dados.
 
 - [Axios](https://axios-http.com/)
